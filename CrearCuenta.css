@@ -1,0 +1,189 @@
+:root{
+    --TipografiaTitulo : 'Oswald', sans-serif;
+    --TipografiaSecundaria: 'Ubuntu', sans-serif;
+    --TipografiaGeneral: 'Belanosima', sans-serif;
+    --FondoHeader: #0E0E1A;
+    --FondoBody: #20203D;
+    --ColorAzul: #200778;
+    --ColorAzulClaro: #0838FF;
+    --ColorVioleta: #E800B4;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    position: relative;
+    background-color: var(--FondoBody);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.Crear-Cuenta{
+    position: absolute;
+    top: 100px;
+    width: 330px;
+    height: 440px;
+    border-radius: 10px;
+    background: var(--FondoHeader);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 220px 30px 60px 40px;
+    row-gap: 7px;
+}
+.Crear-Cuenta:nth-child(1){
+    display: grid;
+}
+.Crear-Cuenta:nth-child(2){
+    display: none;
+}
+.Crear-Cuenta:nth-child(3){
+    display: none;
+}
+.Crear-Cuenta:nth-child(4){
+    display: none;
+}
+.Crear-Cuenta::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(145deg ,var(--ColorAzulClaro), var(--ColorVioleta), var(--ColorAzul), var(--ColorVioleta));
+    background-size: 100%;
+    filter: blur(8px);
+    border-radius: 10px;
+    z-index: -100;
+}
+.Contenedor-Crear:nth-child(1){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--ColorAzulClaro);
+    font-family: var(--TipografiaSecundaria);
+    font-size: 21px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0 30px;
+}
+.Contenedor-Crear:nth-child(1) button{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px 0 20px 0;
+    background-color: transparent;
+    color: #FFFFFF;
+    font-family: var(--TipografiaSecundaria);
+    font-size: 20px;
+    border: none;
+    border-bottom: 3px solid var(--ColorAzulClaro);
+    border-right: 3px solid var(--ColorAzulClaro);
+    transition: .5s;
+    cursor: pointer;
+}
+.Contenedor-Crear:nth-child(1) button:hover{
+    background-color: #0838FF;
+    transition: .5s;
+}
+.Contenedor-Crear:nth-child(2){
+    position: relative;
+    top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.Contenedor-inputs{
+    position: relative;
+    width: 80%;
+    height: 50px;
+}
+.Contenedor-inputs input{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 4px solid var(--ColorAzulClaro);
+    background-color: transparent;
+    outline: none;
+    padding: 10px 15px 0 15px;
+}
+.Contenedor-inputs label{
+    position: absolute;
+    top: 19px;
+    left: 17px;
+    font-family: var(--TipografiaGeneral);
+    font-weight: 600;
+    color: #9b9292;
+    transition: .5s;
+}
+.Contenedor-inputs input:focus~label{
+    top: -10px;
+    color: #2969FF;
+    transition: .5s;
+}
+.Contenedor-Crear:nth-child(3){
+    position: relative;
+    top: -5px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    padding-left: 35px;
+}
+.Contenedor-Crear:nth-child(3) a{
+    font-family: var(--TipografiaSecundaria);
+    color: #0838FF;
+    font-weight: 600;
+    transition: .5s;
+}
+.Contenedor-Crear:nth-child(3) a:hover{
+    color: #200778;
+    transition: .5s;
+}
+.Contenedor-Crear:nth-child(4){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contenedor-Crear:nth-child(4) button, .Contenedor-Crear:nth-child(4) input{
+    padding: 10px 32px;
+    border: 4px solid #0838FF;
+    background-color: var(--FondoHeader);
+    color: #FFFFFF;
+    font-family: var(--TipografiaSecundaria);
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .5s;
+}
+.Contenedor-Crear:nth-child(4) button:hover, .Contenedor-Crear:nth-child(4) input:hover{
+    background-color: #0838FF;
+    color: #FFFFFF;
+    transition: .5s;
+}
+.Contenedor-Crear:nth-child(5){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Contenedor-Crear:nth-child(5) > div{
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin: 0 7px;
+    border: 2px solid #947290;
+}
