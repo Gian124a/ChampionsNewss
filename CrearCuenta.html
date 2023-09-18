@@ -11,8 +11,44 @@
 <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Belanosima&family=Heebo:wght@500&family=Kanit:ital@1&family=Lato&family=Montserrat:wght@100;200&family=Noto+Sans+Display:wght@300;400&family=Noto+Sans+JP:wght@200&family=Oswald:wght@500&family=Righteous&family=Roboto+Condensed&family=Roboto:wght@100;500&family=Slabo+27px&family=Ubuntu+Condensed&family=Ubuntu:wght@300;400;500&family=Victor+Mono&display=swap" rel="stylesheet">
     <!-- ------------------------------------------- -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
 <body>
+    <header>
+        <div class="Contenedor-Botones" onclick="Boton2()">
+            <span class="material-symbols-outlined">settings</span>
+        </div>
+        <div class="Contenedor-Menu Menu" id="Menu">
+            <ul class="Lista Lista-Menu">
+                <a href="#"><li><span class="material-symbols-outlined">newspaper</span>Noticias</li></a>
+                <a href="#"><li><span class="material-symbols-outlined">sports_soccer</span>Partidos</li></a>
+                <a href="#"><li><span class="material-symbols-outlined">shield</span>Equipos</li></a>
+                <a href="#">
+                    <li>
+                        <div class="Contenedor-Grupo">
+                            <span class="material-symbols-outlined">shield</span>
+                            <span class="material-symbols-outlined">shield</span>
+                            <span class="material-symbols-outlined">shield</span>
+                        </div>
+                        Grupos
+                    </li>
+                </a>
+            </ul>
+        </div>
+        <a href="#" class="Contenedor-Titulo">
+            <img src="news champions.png" alt="">
+            <h1>ChampionsNews</h1>
+        </a>
+        <nav class="Contenedor-Menu nav" id="nav">
+            <ul class="Lista Lista-nav">
+                <a href="#"><li><span class="material-symbols-outlined search">search</span><span class="Buscar">Buscar</span></li></a>
+                <a href="index.html"><li><span class="material-symbols-outlined settings">settings</span><span class="Confi">Configuracion</span></li></a>
+                <a href="#"><li><span class="material-symbols-outlined">person_add</span><span>Crear Cuenta</span></li></a>
+                <a href="Sesion.html"><li><span class="material-symbols-outlined">account_circle</span><span>Iniciar Sesion</span></li></a>
+            </ul>
+        </nav>
+        <div class="Contenedor-Botones" id="Contenedor-Botones" onclick="Boton()">
+            <span class="material-symbols-outlined">menu</span>
+        </div>
+    </header>
     <section class="Crear-Cuenta" id="Pantalla1">
         
         <div class="Contenedor-Crear">
@@ -141,5 +177,45 @@
             <div id="Circulo4"></div>
         </div>
     </section>
+    <footer>
+        <div class="Footer-Redes">
+            <div class="Titulo">
+                <h3>Redes Sociales</h3>
+            </div>
+            <ul class="Lista-Footer">
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">twitter</a></li>
+                <li><a href="#">Youtube</a></li>
+            </ul>
+        </div>
+        <div class="Footer-Titulo">
+            <img src="news champions.png" alt="">
+            <h1>ChampionsNews</h1>
+        </div>
+        <div class="Footer-Opciones">
+            <div class="Titulo">
+                <h3>Otras Cosas:</h3>
+            </div>
+            <ul class="Lista-Footer ListaOtros">
+                <li><a href="#">Equipos</a></li>
+                <li><a href="#">Partidos</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Grupos</a></li>
+            </ul>
+        </div>
+        <div class="Patrocineos">
+            <img src="pepsi.png" alt="" id="Pepsi">
+            <img src="adidas.png" alt="">
+            <img src="fifa.png" alt="">
+            <img src="logo-Mastercard.png" alt="">
+            <img src="sony.png" alt="">
+            <img src="Logo-lays.png" alt="">
+            <img src="nissan.png" alt="">
+        </div>
+        <div class="Derechos">
+            <p>Derechos reservados por Gianfranco</p>
+        </div>
+    </footer>
 </body>
 </html>
