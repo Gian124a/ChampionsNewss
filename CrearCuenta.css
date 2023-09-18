@@ -28,6 +28,219 @@ body{
     height: 100%;
     width: 100%;
 }
+header{
+    position: fixed;
+    height: 110px;
+    width: 100%;
+    background-color: var(--FondoHeader);
+    display: flex;
+    align-items: center;
+    z-index: 10000;
+    border-bottom: 1px solid var(--ColorAzulClaro);
+}
+.Contenedor-Titulo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Contenedor-Titulo img{
+    width: 70px;
+}
+.Contenedor-Titulo h1{
+    font-family: var(--TipografiaTitulo);
+    color: #FFFFFF;
+    font-size: 22px;
+}
+.Contenedor-Botones{
+    display: flex;
+    align-items: center;
+}
+.Contenedor-Botones:nth-child(1){
+    position: absolute;
+    right: 45px;
+}
+#Contenedor-Botones{
+    position: absolute;
+    left: 45px;
+}
+.Contenedor-Botones span{
+    font-size: 25px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: .5s;
+}
+.Contenedor-Botones span:hover{
+    color: var(--ColorAzulClaro);
+    transition: .5s;
+}
+.Contenedor-Menu{
+    position: absolute;
+    top: 110px;
+    width: 170px;
+    height: 252px;
+    background-color: var(--FondoHeader);
+}
+.Lista{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.Lista a{
+    position: relative;
+    width: 100%;
+    padding: 31.2px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF;
+    font-family: var(--TipografiaSecundaria);
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    
+    transition: .5s;
+}
+.Lista a li span:not(.Contenedor-Grupo span){
+    margin-right: 10px;
+}
+.Lista a:hover{
+    background-color: #161629;
+    color: var(--ColorAzulClaro);
+    transition: .5s;
+}
+.Lista a li{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Menu{
+    left: 0;
+    display: none;
+    z-index: 10000;
+    border: 1px solid #1857CC;
+    border-left: none;
+    border-top: none;
+}
+.Lista-Menu a{
+    padding: 30.8px 0;
+}
+.Lista-Menu a:nth-child(4){
+    padding: 33px 0;
+}
+.Contenedor-Grupo{
+    position: relative;
+    left: -8px;
+    width: 35px;
+    height: 35px;
+}
+.Contenedor-Grupo span{
+    position: absolute;
+}
+.Contenedor-Grupo span:nth-child(1){
+    left: -2.5px;
+}
+.Contenedor-Grupo span:nth-child(2){
+    bottom: 3px;
+    left: 5px;
+}
+.Contenedor-Grupo span:nth-child(3){
+    right: -2.5px;
+}
+nav{
+    z-index: 10000;
+    display: none;
+    right: 0;
+    border: 1px solid #1857CC;
+    border-right: none;
+    border-top: none;
+}
+@media (min-width: 1100px) {
+    .Contenedor-Botones{
+        display: none;
+    }
+    .Contenedor-Titulo{
+        margin-left: 15px;
+    }
+    .Menu{
+        display: initial;
+        top: 0;
+        left: 210px;
+        width: 500px;
+        height: 100%;
+        border: none;
+    }
+    .Menu ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .Menu ul a{
+        padding: 0;
+    }
+    .nav{
+        position: absolute;
+        display: initial;
+        top: 0;
+        right: 0;
+        width: 500px;
+        height: 100%;
+        border: none;
+        z-index: 1000000;
+    }
+    .nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        border: none;
+    }
+    .nav ul a{
+        display: inline;   
+        width: 150px;
+        height: 0;
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav ul a:nth-child(1), .nav ul a:nth-child(2){
+        width: 40px;
+        left: 5px;
+    }
+    .search, .settings{
+        position: absolute;
+        left: 9px;
+    }
+    .nav ul li{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Buscar, .Confi{
+        display: none;
+    }
+    .Lista a:hover{
+        background-color: transparent;
+    }
+}
 .Crear-Cuenta{
     position: absolute;
     top: 100px;
@@ -186,4 +399,94 @@ body{
     border-radius: 50%;
     margin: 0 7px;
     border: 2px solid #947290;
+}
+footer{
+    background-color: var(--FondoHeader);
+    position: absolute;
+    width: 100%;
+    min-width: 375px;
+    top: 100%;
+    display: grid;
+    grid-template-columns: minmax(105px, 215px) minmax(110px, 215px) minmax(105px, 215px);
+    grid-template-rows: 150px 55px 40px;
+    background-color: var(--FondoHeader);
+}
+.Footer-Redes{
+    grid-column: 1 / 2;
+}
+.Footer-Opciones, .Footer-Redes{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 40px 1fr;
+}
+.Titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    border-bottom: 1px solid var(--ColorAzulClaro);
+}
+.Lista-Footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Footer-Redes h3, .Footer-Opciones h3{
+    font-family: var(--TipografiaSecundaria);
+    font-size: 14px;
+    color: #FFFFFF;
+}
+.Footer-Redes ul, .Footer-Opciones ul{
+    font-family: var(--TipografiaSecundaria);
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.Footer-Redes ul li a, .Footer-Opciones ul li a{
+    color: #FFFFFF;
+}
+.Footer-Redes ul li a:hover, .Footer-Opciones ul li a:hover{
+    color: var(--ColorAzulClaro);
+}
+.Footer-Titulo{
+    grid-column: 2 / 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Footer-Titulo img{
+    width: 90px;
+}
+.Footer-Titulo h1{
+    font-size: 19px;
+    font-family: var(--TipografiaTitulo);
+    color: #FFFFFF;
+}
+.Footer-Opciones{
+    grid-column: 3 / 4;
+}
+.Patrocineos{
+    grid-row: 2 / 3;
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--ColorAzulClaro);
+}
+.Patrocineos img{
+    width: 45px;
+}
+.Derechos{
+    background-color: #000000;
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+    color: #FFFFFF;
+    font-family: var(--TipografiaSecundaria);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
